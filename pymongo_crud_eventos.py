@@ -76,7 +76,7 @@ def main():
             }
         },
         # Limitar os documentos em apenas 5
-        { "$limit" : "5" },
+        { "$limit" : 5 },
         # Projetar na tela
         # Detalhes: O id do evento não será mostrado, mas o nome do evento, a media da capacidade da menor para a maior capacidade, e o local do evento
         { "$project": 
@@ -92,7 +92,7 @@ def main():
     resultado_pipe = colecao_event.aggregate(pipeline)
 
     for doc in resultado_pipe:
-        print(doc)
+        print(f"{doc}")
 
 if __name__ == "__main__":
     main()
