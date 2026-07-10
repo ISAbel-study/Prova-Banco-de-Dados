@@ -11,7 +11,7 @@ def get_database():
     mas possui um valor padrão para uso local (Compass).
     """
     # LACUNA 2: String de conexão. Em um ambiente real, prefira usar variáveis de ambiente (os.environ.get)
-    CONNECTION_STRING = os.environ.get("MONGO_URI", "mongodb+srv://user2:usuario2@cluster0.ut0ygew.mongodb.net/?appName=Cluster0")
+    CONNECTION_STRING = os.environ.get("MONGO_URI", "mongodb+srv://<db_username>:<db_password>@cluster0.ut0ygew.mongodb.net/?appName=Cluster0")
     
     try:
         # LACUNA 3: Crie a conexão com o cliente do MongoDB utilizando a CONNECTION_STRING
